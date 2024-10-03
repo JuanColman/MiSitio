@@ -1,0 +1,132 @@
+/* General Styles */
+body {
+    font-family: 'Helvetica', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1, h2 {
+    color: #2c3e50; /* Un color oscuro para títulos */
+}
+
+a {
+    text-decoration: none;
+    color: #2980b9;
+}
+
+a:hover {
+    color: #c8102e; /* Rojo para el hover de los links */
+}
+
+/* Header Styles */
+header {
+    background-color: white;
+    border-bottom: 5px solid #27ae60; /* Franja verde representando la bandera italiana */
+    padding: 20px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #27ae60; /* Verde para el título del bazar */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    font-size: 1rem;
+    padding: 10px 15px;
+    background-color: #c8102e; /* Rojo en los botones de navegación */
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #a50b21; /* Hover más oscuro para el rojo */
+}
+
+/* Main Content Styles */
+main {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#productos, #carrito {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #27ae60; /* Verde para los títulos de secciones */
+}
+
+/* Product Section */
+#lista-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+#lista-productos div {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#lista-productos div:hover {
+    transform: scale(1.05);
+}
+
+#lista-productos img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Cart Section */
+#carrito {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #c8102e; /* Fondo rojo en el footer */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    border-top: 5px solid #27ae60; /* Franja verde en el borde superior del footer */
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
