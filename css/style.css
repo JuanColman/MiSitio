@@ -130,3 +130,58 @@ footer p {
     margin: 0;
     font-size: 0.9rem;
 }
+
+/* Media Queries */
+@media (max-width: 768px) {
+    /* Header */
+    header {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 1.5rem; /* Reduce el tamaño del título */
+    }
+
+    nav ul {
+        flex-direction: column; /* Cambia a vertical en móviles */
+        align-items: center; /* Centra los enlaces */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Espaciado vertical */
+    }
+
+    nav ul li a {
+        font-size: 1rem; /* Mantiene el tamaño de fuente */
+        padding: 10px; /* Reduce el padding */
+    }
+
+    /* Main Content */
+    main {
+        padding: 30px 10px; /* Reduce el padding */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Reduce el tamaño del título de las secciones */
+    }
+
+    /* Product Section */
+    #lista-productos {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajustes adicionales para pantallas muy pequeñas */
+    nav ul li a {
+        padding: 8px; /* Reduce aún más el padding en enlaces */
+    }
+
+    h2 {
+        font-size: 1.3rem; /* Reduce aún más el tamaño de los títulos */
+    }
+
+    footer p {
+        font-size: 0.8rem; /* Reduce el tamaño del texto del footer */
+    }
+}
