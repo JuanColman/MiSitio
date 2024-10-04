@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacto</title>
     <link rel="icon" href="./img/logoICO.png" type="image/png" sizes="32x32">
     <link rel="stylesheet" href="./css/style.css">
-  </head>
+</head>
 <body>
-    <!-- Header: Sección superior del sitio -->
+    <!-- Header -->
     <header>
         <div class="logo">
             <a href="index.html">
@@ -28,19 +28,26 @@
         </nav>
     </header>
 
-    <!-- Main: Contenido principal -->
+    <!-- Main Content -->
     <main>
         <h2>Formulario de contacto</h2>
-        <form action="https://formspree.io/f/{form_id}" method="post" target="_blank">
-            <label for="email">Tu correo electrónico</label>
-            <input name="Email" id="email" type="email" required>
+        <form action="https://formspree.io/f/xnnqajjn" method="POST">
+            <label for="name">Tu nombre:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Tu correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Tu mensaje:</label>
+            <textarea id="message" name="message" required></textarea>
+
             <button type="submit">Enviar</button>
         </form>
 
         <h2>Contáctanos</h2>
         <a href="https://wa.me/541168983355" target="_blank" class="whatsapp-button">
-           <img src="img/whatsapp-icon.png" alt="Icono de WhatsApp" width="25">
-           <strong>Envíanos un mensaje por WhatsApp</strong>
+            <img src="img/whatsapp-icon.png" alt="Icono de WhatsApp" width="25">
+            <strong>Envíanos un mensaje por WhatsApp</strong>
         </a>
 
         <br><br>
