@@ -1,4 +1,4 @@
-/* General Styles */
+/* Estilos Generales */
 body {
     font-family: 'Helvetica', sans-serif;
     margin: 0;
@@ -20,7 +20,7 @@ a:hover {
     color: #c8102e; /* Rojo para el hover de los links */
 }
 
-/* Header Styles */
+/* Estilos del Header */
 header {
     background-color: white;
     border-bottom: 5px solid #27ae60; /* Franja verde representando la bandera italiana */
@@ -63,7 +63,7 @@ nav ul li a:hover {
     background-color: #a50b21; /* Hover más oscuro para el rojo */
 }
 
-/* Main Content Styles */
+/* Estilos del Contenido Principal */
 main {
     padding: 50px 20px;
     max-width: 1200px;
@@ -81,7 +81,7 @@ h2 {
     color: #27ae60; /* Verde para los títulos de secciones */
 }
 
-/* Product Section */
+/* Sección de Productos */
 #lista-productos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -108,7 +108,7 @@ h2 {
     border-radius: 5px;
 }
 
-/* Cart Section */
+/* Sección del Carrito */
 #carrito {
     background-color: white;
     padding: 30px;
@@ -116,7 +116,7 @@ h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer Styles */
+/* Estilos del Footer */
 footer {
     background-color: #c8102e; /* Fondo rojo en el footer */
     color: white;
@@ -156,7 +156,7 @@ footer p {
         padding: 10px; /* Reduce el padding */
     }
 
-    /* Main Content */
+    /* Contenido Principal */
     main {
         padding: 30px 10px; /* Reduce el padding */
     }
@@ -165,7 +165,7 @@ footer p {
         font-size: 1.5rem; /* Reduce el tamaño del título de las secciones */
     }
 
-    /* Product Section */
+    /* Sección de Productos */
     #lista-productos {
         grid-template-columns: 1fr; /* Una columna en móviles */
     }
