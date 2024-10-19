@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacto</title>
+    <meta name="description" content="Contáctanos para cualquier consulta sobre nuestros productos en el Bazar.">
     <link rel="icon" href="./img/logoICO.png" type="image/png" sizes="32x32">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href=".\css\style_pagina_Contacto.css">
 </head>
 <body>
     <!-- Header -->
@@ -30,19 +31,22 @@
 
     <!-- Main Content -->
     <main>
-        <h2>Formulario de contacto</h2>
-        <form action="https://formspree.io/f/xnnqajjn" method="POST">
-            <label for="name">nombre:</label>
-            <input type="text" id="name" name="name" required>
+        <section>
+            <h2>Formulario de contacto</h2>
+            <form action="https://formspree.io/f/xnnqajjn" method="POST">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" placeholder="Tu nombre" required>
 
-            <label for="email">correo electrónico:</label>
-            <input type="email" id="email" name="email" required>
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="Tu correo" required>
 
-            <label for="message">mensaje:</label>
-            <textarea id="message" name="message" required></textarea>
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" placeholder="Escribe tu mensaje aquí..." required></textarea>
 
-            <button type="submit">Enviar</button>
-        </form>
+                <button type="submit">Enviar</button>
+            </form>
+            <div id="response-message"></div>
+        </section>
 
         <h2>Contáctanos</h2>
         <a href="https://wa.me/541168983355" target="_blank" class="whatsapp-button">
