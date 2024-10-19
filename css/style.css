@@ -10,13 +10,13 @@ body {
 
 header {
     background-color: #d52b1e; /* Rojo de la bandera italiana */
-    padding: 20px;
+    padding: 15px; /* Reduce el padding superior e inferior */
     text-align: center;
 }
 
 .logo img {
     width: 100%;
-    max-width: 140px;
+    max-width: 120px; /* Reduce el tamaño máximo del logo */
 }
 
 nav ul {
@@ -26,7 +26,7 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin: 0 10px; /* Reduce el margen entre elementos */
 }
 
 nav ul li a {
@@ -70,7 +70,7 @@ h2 {
 }
 
 .producto img {
-    max-width: 60%; /* Reduce el tamaño de las imágenes al 60% */
+    max-width: 80%; /* Reduce el tamaño de las imágenes al 80% */
     height: auto;
     transition: transform 0.3s; /* Transición para la imagen */
 }
@@ -120,4 +120,83 @@ footer {
     border-top: 1px solid #d52b1e; /* Línea superior roja */
     color: #333; /* Texto del pie de página */
     font-size: 0.9rem; /* Tamaño de fuente para el pie de página */
+}
+
+/* Media query para tablets (ancho máximo de 1024px) */
+@media (max-width: 1024px) {
+    .contenedor-productos {
+        grid-template-columns: repeat(2, 1fr); /* Muestra dos productos por fila en tablets */
+    }
+
+    h2 {
+        font-size: 1.8rem; /* Tamaño ligeramente menor para tablets */
+    }
+
+    .producto img {
+        max-width: 70%; /* Tamaño de las imágenes para tablets */
+    }
+
+    .producto h3 {
+        font-size: 1.4rem; /* Ajusta el tamaño del título del producto */
+    }
+
+    .producto p {
+        font-size: 0.95rem; /* Ajusta el tamaño del texto descriptivo */
+    }
+
+    button {
+        font-size: 0.95rem; /* Botones un poco más pequeños en tablets */
+    }
+}
+
+/* Media query para celulares (ancho máximo de 768px) */
+@media (max-width: 768px) {
+    .contenedor-productos {
+        grid-template-columns: 1fr; /* Muestra un producto por fila en móviles */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Ajusta el tamaño del título en móviles */
+    }
+
+    .producto img {
+        max-width: 100%; /* Tamaño completo de las imágenes para móviles */
+    }
+
+    .producto h3 {
+        font-size: 1.2rem; /* Tamaño del nombre del producto más pequeño en móviles */
+    }
+
+    .producto p {
+        font-size: 0.9rem; /* Texto descriptivo más pequeño en móviles */
+    }
+
+    button {
+        font-size: 0.9rem; /* Botones más pequeños para móviles */
+        padding: 8px 12px; /* Reduce el tamaño del botón en móviles */
+    }
+}
+
+/* Media query para pantallas grandes (ancho mínimo de 1440px) */
+@media (min-width: 1440px) {
+    .contenedor-productos {
+        grid-template-columns: repeat(4, 1fr); /* Muestra cuatro productos por fila en pantallas grandes */
+    }
+
+    h2 {
+        font-size: 2.5rem; /* Título más grande en pantallas grandes */
+    }
+
+    .producto h3 {
+        font-size: 1.7rem; /* Ajusta el tamaño del nombre del producto */
+    }
+
+    .producto p {
+        font-size: 1.1rem; /* Texto descriptivo más grande */
+    }
+
+    button {
+        font-size: 1.1rem; /* Botones más grandes en pantallas grandes */
+        padding: 12px 20px; /* Botones más espaciosos en pantallas grandes */
+    }
 }
