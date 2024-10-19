@@ -1,239 +1,123 @@
-/* Estilos Generales */
+/* Agregar Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400&display=swap');
+
 body {
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Open Sans', sans-serif; /* Fuente principal */
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
+    background: linear-gradient(to bottom, #f8f8f8, #ffffff); /* Fondo gradiente */
 }
 
-h1, h2 {
-    color: #2c3e50; /* Un color oscuro para títulos */
-}
-
-a {
-    text-decoration: none;
-    color: #2980b9;
-}
-
-a:hover {
-    color: #c8102e; /* Rojo para el hover de los links */
-}
-
-/* Estilos del Header */
 header {
-    background-color: white;
-    border-bottom: 5px solid #27ae60; /* Franja verde representando la bandera italiana */
+    background-color: #d52b1e; /* Rojo de la bandera italiana */
     padding: 20px;
+    text-align: center;
 }
 
-header .logo {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-header h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #27ae60; /* Verde para el título del bazar */
+.logo img {
+    width: 100%;
+    max-width: 140px;
 }
 
 nav ul {
-    display: flex;
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
 nav ul li {
-    margin-left: 20px;
+    display: inline;
+    margin: 0 15px;
 }
 
 nav ul li a {
-    font-size: 1rem;
-    padding: 10px 15px;
-    background-color: #c8102e; /* Rojo en los botones de navegación */
-    color: white;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    color: #fff; /* Texto blanco en el menú */
+    text-decoration: none;
+    font-weight: bold; /* Texto en negrita */
+    transition: color 0.3s; /* Transición suave */
 }
 
 nav ul li a:hover {
-    background-color: #a50b21; /* Hover más oscuro para el rojo */
-}
-
-/* Estilos del Contenido Principal */
-main {
-    padding: 50px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-#productos, #carrito {
-    margin-bottom: 40px;
+    color: #fff; /* Mantiene el color blanco al hacer hover */
+    text-decoration: underline; /* Subraya el texto al hacer hover */
 }
 
 h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
     text-align: center;
-    color: #27ae60; /* Verde para los títulos de secciones */
+    margin: 20px 0;
+    color: #d52b1e; /* Título en rojo */
+    font-family: 'Montserrat', sans-serif; /* Fuente para títulos */
+    font-size: 2rem; /* Tamaño de fuente mayor */
+    font-weight: bold; /* Negrita para los títulos */
+    letter-spacing: 1px; /* Espaciado entre letras */
 }
 
-/* Sección de Productos */
-#lista-productos {
+.contenedor-productos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Espacio entre los productos */
+    padding: 0 20px;
 }
 
-#lista-productos div {
-    background-color: white;
-    border: 1px solid #ddd;
+.producto {
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Borde con transparencia */
     border-radius: 8px;
-    padding: 20px;
+    padding: 15px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s; /* Transición para el efecto hover */
+    overflow: hidden; /* Evita que la imagen se desborde */
 }
 
-#lista-productos div:hover {
-    transform: scale(1.05);
-}
-
-#lista-productos img {
-    width: 100%;
+.producto img {
+    max-width: 60%; /* Reduce el tamaño de las imágenes al 60% */
     height: auto;
-    border-radius: 5px;
+    transition: transform 0.3s; /* Transición para la imagen */
 }
 
-/* Estilos del Formulario de Contacto */
-form {
-    max-width: 600px; /* Máximo ancho del formulario */
-    margin: 20px auto; /* Centrar el formulario en la página */
-    padding: 20px; /* Espaciado interno */
-    border: 1px solid #ccc; /* Borde gris claro */
-    border-radius: 10px; /* Bordes redondeados */
-    background-color: #f9f9f9; /* Fondo gris claro */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+.producto h3 {
+    font-size: 1.5rem; /* Tamaño de fuente para el nombre del producto */
+    color: #333; /* Color del texto */
+    margin: 10px 0; /* Espaciado superior e inferior */
+    font-family: 'Montserrat', sans-serif; /* Fuente para el nombre del producto */
 }
 
-label {
-    display: block; /* Hacer que la etiqueta ocupe todo el ancho */
-    margin-bottom: 5px; /* Espacio debajo de la etiqueta */
-    font-weight: bold; /* Texto en negrita */
-    color: #555; /* Color del texto */
+.producto p {
+    font-size: 1rem; /* Tamaño de fuente para las descripciones */
+    color: #666; /* Color del texto descriptivo */
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
-    width: 100%; /* Ancho completo */
-    padding: 10px; /* Espaciado interno */
-    margin-bottom: 15px; /* Espacio debajo del campo */
-    border: 1px solid #ccc; /* Borde gris claro */
-    border-radius: 5px; /* Bordes redondeados */
-    font-size: 16px; /* Tamaño de fuente */
-    transition: border-color 0.3s; /* Transición suave para el borde */
+.producto:hover {
+    transform: scale(1.05); /* Aumenta el tamaño del box al hacer hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25); /* Sombra más intensa al hacer hover */
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus {
-    border-color: #007BFF; /* Color del borde al hacer foco */
-    outline: none; /* Sin contorno adicional */
+.producto:hover img {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen al hacer hover */
 }
 
 button {
-    background-color: #007BFF; /* Color de fondo del botón */
-    color: #fff; /* Color del texto del botón */
-    padding: 10px 15px; /* Espaciado interno del botón */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    font-size: 16px; /* Tamaño de fuente */
-    cursor: pointer; /* Cambiar cursor a puntero */
-    transition: background-color 0.3s; /* Transición suave para el fondo */
+    background-color: #d52b1e; /* Rojo de la bandera italiana */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transición para el botón */
+    font-size: 1rem; /* Tamaño de fuente del botón */
+    font-weight: bold; /* Negrita para el botón */
 }
 
 button:hover {
-    background-color: #0056b3; /* Color de fondo al pasar el ratón */
+    background-color: #b02018; /* Tonalidad más oscura al pasar el mouse */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra al hacer hover */
 }
 
-/* Sección del Carrito */
-#carrito {
-    background-color: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilos del Footer */
 footer {
-    background-color: #c8102e; /* Fondo rojo en el footer */
-    color: white;
     text-align: center;
-    padding: 20px 0;
-    margin-top: 50px;
-    border-top: 5px solid #27ae60; /* Franja verde en el borde superior del footer */
-}
-
-footer p {
-    margin: 0;
-    font-size: 0.9rem;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-    /* Header */
-    header {
-        padding: 15px;
-    }
-
-    header h1 {
-        font-size: 1.5rem; /* Reduce el tamaño del título */
-    }
-
-    nav ul {
-        flex-direction: column; /* Cambia a vertical en móviles */
-        align-items: center; /* Centra los enlaces */
-    }
-
-    nav ul li {
-        margin: 10px 0; /* Espaciado vertical */
-    }
-
-    nav ul li a {
-        font-size: 1rem; /* Mantiene el tamaño de fuente */
-        padding: 10px; /* Reduce el padding */
-    }
-
-    /* Contenido Principal */
-    main {
-        padding: 30px 10px; /* Reduce el padding */
-    }
-
-    h2 {
-        font-size: 1.5rem; /* Reduce el tamaño del título de las secciones */
-    }
-
-    /* Sección de Productos */
-    #lista-productos {
-        grid-template-columns: 1fr; /* Una columna en móviles */
-    }
-}
-
-@media (max-width: 480px) {
-    /* Ajustes adicionales para pantallas muy pequeñas */
-    nav ul li a {
-        padding: 8px; /* Reduce aún más el padding en enlaces */
-    }
-
-    h2 {
-        font-size: 1.3rem; /* Reduce aún más el tamaño de los títulos */
-    }
-
-    footer p {
-        font-size: 0.8rem; /* Reduce el tamaño del texto del footer */
-    }
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia */
+    border-top: 1px solid #d52b1e; /* Línea superior roja */
+    color: #333; /* Texto del pie de página */
+    font-size: 0.9rem; /* Tamaño de fuente para el pie de página */
 }
