@@ -9,42 +9,57 @@ body {
 }
 
 header {
-    background-color: #d52b1e; /* Rojo de la bandera italiana */
-    padding: 15px; /* Reduce el padding superior e inferior */
-    text-align: center;
+    background-color: #d52b1e; /* Rojo italiano */
+    padding: 10px 20px; /* Espaciado interno */
+    display: flex; /* Mantiene la flexibilidad */
+    justify-content: space-between; /* Espaciado entre logo y menú */
+    align-items: center; /* Alinea verticalmente */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
+}
+
+.logo {
+    display: flex; /* Flex para centrar el logo */
+    align-items: center; /* Centrar verticalmente el logo */
 }
 
 .logo img {
-    width: 100%;
-    max-width: 120px; /* Reduce el tamaño máximo del logo */
+    width: 100%; /* Ajustar al contenedor */
+    max-width: 150px; /* Tamaño máximo del logo */
+    height: auto; /* Mantiene la relación de aspecto */
+}
+
+nav {
+    margin-left: auto; /* Empuja el menú hacia la derecha */
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
+    padding: 0; /* Sin padding */
+    margin: 0; /* Sin margen */
+    display: flex; /* Alineación horizontal */
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 10px; /* Reduce el margen entre elementos */
+    margin: 0 15px; /* Espaciado entre elementos del menú */
 }
 
 nav ul li a {
-    color: #fff; /* Texto blanco en el menú */
-    text-decoration: none;
-    font-weight: bold; /* Texto en negrita */
-    transition: color 0.3s; /* Transición suave */
+    color: #ffffff; /* Texto en blanco para contraste */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* Negrita para mayor impacto */
+    font-size: 1.1rem; /* Tamaño de fuente */
+    transition: color 0.3s; /* Transición suave al cambiar color */
 }
 
 nav ul li a:hover {
-    color: #fff; /* Mantiene el color blanco al hacer hover */
+    color: #f5a623; /* Color dorado claro al hacer hover */
     text-decoration: underline; /* Subraya el texto al hacer hover */
 }
 
 h2 {
     text-align: center;
     margin: 20px 0;
-    color: #d52b1e; /* Título en rojo */
+    color: #009246; /* Título en verde italiano */
     font-family: 'Montserrat', sans-serif; /* Fuente para títulos */
     font-size: 2rem; /* Tamaño de fuente mayor */
     font-weight: bold; /* Negrita para los títulos */
@@ -55,22 +70,22 @@ h2 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px; /* Espacio entre los productos */
-    padding: 0 20px;
+    padding: 0 40px;
 }
 
 .producto {
-    border: 1px solid rgba(0, 0, 0, 0.1); /* Borde con transparencia */
+    border: 1px solid rgba(0, 0, 0, 0.2); /* Borde con transparencia */
     border-radius: 8px;
-    padding: 15px;
+    padding: 17px;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con transparencia */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s, box-shadow 0.3s; /* Transición para el efecto hover */
-    overflow: hidden; /* Evita que la imagen se desborde */
+    overflow: hidden; /* Ajuste para evitar desbordes */
 }
 
 .producto img {
-    max-width: 80%; /* Reduce el tamaño de las imágenes al 80% */
+    max-width: 100%; /* Ajuste para que las imágenes no se desborden */
     height: auto;
     transition: transform 0.3s; /* Transición para la imagen */
 }
@@ -97,7 +112,7 @@ h2 {
 }
 
 button {
-    background-color: #d52b1e; /* Rojo de la bandera italiana */
+    background-color: #009246; /* Verde de la bandera italiana */
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -109,14 +124,14 @@ button {
 }
 
 button:hover {
-    background-color: #b02018; /* Tonalidad más oscura al pasar el mouse */
+    background-color: #007a3d; /* Tonalidad más oscura al pasar el mouse */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra al hacer hover */
 }
 
 footer {
     text-align: center;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia */
+    background-color: rgba(206, 184, 184, 0.9); /* Fondo con un tono suave */
     border-top: 1px solid #d52b1e; /* Línea superior roja */
     color: #333; /* Texto del pie de página */
     font-size: 0.9rem; /* Tamaño de fuente para el pie de página */
@@ -199,4 +214,13 @@ footer {
         font-size: 1.1rem; /* Botones más grandes en pantallas grandes */
         padding: 12px 20px; /* Botones más espaciosos en pantallas grandes */
     }
+
+    nav ul li {
+        margin: 0 20px; /* Aumenta el espacio entre los elementos del menú */
+    }
+
+    .producto img {
+        max-width: 90%; /* Tamaño de las imágenes más grandes en pantallas grandes */
+    }
 }
+
