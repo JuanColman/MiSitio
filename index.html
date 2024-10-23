@@ -6,6 +6,55 @@
     <title>Tienda Online - Productos Destacados</title>
     <link rel="icon" href="./img/logoICO.png" type="image/png" sizes="32x32">
     <link rel="stylesheet" href="./css/style.css">
+    <style>
+        /* Estilo para las reseñas */
+        #reseñas {
+            margin-top: 40px;
+        }
+
+        .contenedor-reseñas {
+            display: flex;
+            flex-direction: column;
+            gap: 20px; /* Espacio entre las reseñas */
+        }
+
+        .reseña {
+            border: 1px solid #ccc; /* Línea delgada alrededor de cada reseña */
+            padding: 15px;
+            border-radius: 8px; /* Bordes redondeados */
+            background-color: #f9f9f9; /* Fondo suave */
+        }
+
+        .reseña h3 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        .puntuacion {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .estrella {
+            color: gold; /* Color de las estrellas */
+            font-size: 1.2em;
+        }
+
+        .bar-container {
+            background-color: #e0e0e0; /* Fondo de la barra */
+            border-radius: 8px;
+            overflow: hidden;
+            height: 10px;
+            width: 100%;
+        }
+
+        .bar {
+            height: 100%;
+            background-color: green; /* Color de la barra según la puntuación */
+            transition: width 0.3s; /* Animación suave al cargar la puntuación */
+        }
+    </style>
 </head>
 <body>
     <!-- Header: Sección superior del sitio -->
@@ -108,26 +157,79 @@
                 <article class="producto">
                     <img src="./img/plato-hondo-festival.jpg" alt="Plato Hondo Festival">
                     <h3>Plato Hondo Festival</h3>
-                    <p>Este plato hondo, adornado con un colorido diseño de festival, es ideal para sopas, ensaladas y más. Hecho de cerámica de calidad, cada plato es una obra de arte que combina funcionalidad con belleza.</p>
-                    <p>Disfruta de tus comidas en un plato que refleja alegría y tradición.</p>
+                    <p>Este plato hondo, adornado con un colorido diseño de festival, es ideal para sopas, ensaladas y más. Hecho de cerámica de calidad, cada plato trae alegría a tu mesa y a tus comidas.</p>
+                    <p>Convierte cada comida en una celebración.</p>
                     <button aria-label="Añadir Plato Hondo Festival al carrito">Añadir al carrito</button>
                 </article>
 
                 <!-- Noveno producto -->
                 <article class="producto">
-                    <img src="./img/fuente-rectangular-pyrex.jpg" alt="Fuente Rectangular Pyrex">
-                    <h3>Fuente Rectangular Pyrex</h3>
-                    <p>Esta fuente rectangular de Pyrex es esencial para los amantes de la cocina. Su diseño permite una cocción uniforme y su aspecto elegante la hace perfecta para servir en la mesa. Ideal para gratinados y asados, es un artículo que no puede faltar en tu hogar.</p>
-                    <p>¡Transforma tu cocina en un verdadero taller gourmet!</p>
-                    <button aria-label="Añadir Fuente Rectangular Pyrex al carrito">Añadir al carrito</button>
+                    <img src="./img/set-cocina.jpg" alt="Set de Cocina">
+                    <h3>Set de Cocina</h3>
+                    <p>Descubre la magia de la cocina con este completo set de utensilios. Desde cucharas de madera hasta espátulas, este set incluye todo lo necesario para llevar a cabo tus recetas con facilidad.</p>
+                    <p>Haz de cada plato una obra maestra culinaria.</p>
+                    <button aria-label="Añadir Set de Cocina al carrito">Añadir al carrito</button>
                 </article>
+            </div>
+        </section>
+
+        <!-- Sección de Reseñas -->
+        <section id="reseñas">
+            <h2>Lo Que Dicen Nuestros Clientes</h2>
+            <div class="contenedor-reseñas">
+                <div class="reseña">
+                    <div class="puntuacion">
+                        <span class="estrella">★</span>
+                        <span class="estrella">★</span>
+                        <span class="estrella">★</span>
+                        <span class="estrella">★</span>
+                        <span class="estrella">★</span>
+                    </div>
+                    <div class="bar-container">
+                        <div class="bar" style="width: 100%;"></div>
+                    </div>
+                    <h3>Ana</h3>
+                    <p>Los platos son hermosos y muy funcionales. ¡Estoy muy satisfecha!</p>
+                </div>
+                <div class="reseña">
+                    <div class="puntuacion">
+                        <span class="estrella">★</span>
+                        <span class="estrella">★</span>
+                        <span class="estrella">★</span>
+                        <span class="estrella">★</span>
+                        <span class="estrella">☆</span>
+                    </div>
+                    <div class="bar-container">
+                        <div class="bar" style="width: 80%;"></div>
+                    </div>
+                    <h3>Juan</h3>
+                    <p>Excelente calidad, volveré a comprar sin duda.</p>
+                </div>
+                <div class="reseña">
+                    <div class="puntuacion">
+                        <span class="estrella">★</span>
+                        <span class="estrella">★</span>
+                        <span class="estrella">★</span>
+                        <span class="estrella">★</span>
+                        <span class="estrella">★</span>
+                    </div>
+                    <div class="bar-container">
+                        <div class="bar" style="width: 100%;"></div>
+                    </div>
+                    <h3>Maria</h3>
+                    <p>Los productos son de alta calidad y la atención al cliente fue excepcional.</p>
+                </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer: Sección inferior del sitio -->
+    <!-- Footer: Pie de página -->
     <footer>
-        <p>&copy; 2024 Bazar de la Nonna. Todos los derechos reservados.</p>
+        <p>© 2024 Bazar de la Nonna - Todos los derechos reservados.</p>
+        <div class="redes-sociales">
+            <a href="https://www.instagram.com/tu_instagram" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com/tu_facebook" target="_blank">Facebook</a>
+        </div>
     </footer>
 </body>
 </html>
